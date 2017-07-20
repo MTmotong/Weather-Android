@@ -9,7 +9,7 @@ import org.litepal.crud.DataSupport;
 public class Country extends DataSupport {
     private int id;
     private String countryName;
-    private String countryCode;
+    private int countryCode;
     private int cityId;
 
     public int getId() {
@@ -28,11 +28,11 @@ public class Country extends DataSupport {
         this.countryName = countryName;
     }
 
-    public String getCountryCode() {
+    public int getCountryCode() {
         return countryCode;
     }
 
-    public void setCountryCode(String countryCode) {
+    public void setCountryCode(int countryCode) {
         this.countryCode = countryCode;
     }
 

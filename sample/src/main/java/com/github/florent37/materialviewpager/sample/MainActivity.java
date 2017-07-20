@@ -1,12 +1,14 @@
 package com.github.florent37.materialviewpager.sample;
 
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,6 +39,23 @@ public class MainActivity extends DrawerActivity {
         if (toolbar != null) {
             setSupportActionBar(toolbar);
         }
+
+//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.action_settings:
+//                        Toast.makeText(MainActivity.this, "action_settings", Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case R.id.action_share:
+//                        Toast.makeText(MainActivity.this, "action_share", Toast.LENGTH_SHORT).show();
+//                        break;
+//                    default:
+//                        break;
+//                }
+//                return true;
+//            }
+//        });
 
         mViewPager.getViewPager().setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
 
@@ -116,5 +135,15 @@ public class MainActivity extends DrawerActivity {
                 }
             });
         }
+
+        //侧边栏
+        NavigationView navigationView = (NavigationView) findViewById(R.id.left_drawer);
+        navigationView.setCheckedItem(R.id.nav_addcity);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                return true;
+            }
+        });
     }
 }
