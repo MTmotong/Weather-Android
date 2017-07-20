@@ -29,4 +29,17 @@
 
     <include layout="@layout/drawer" />
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/choose_area_fragment">
+
+        <!--<fragment-->
+            <!--android:id="@+id/choose_area_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:name="com.github.florent37.materialviewpager.sample.fragment.ChooseAreaFragment" />-->
+
+    </FrameLayout>
+
 </android.support.v4.widget.DrawerLayout>
