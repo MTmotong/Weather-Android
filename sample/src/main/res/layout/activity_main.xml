@@ -27,7 +27,6 @@
 
         />
 
-    <include layout="@layout/drawer" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -41,5 +40,17 @@
             <!--android:name="com.github.florent37.materialviewpager.sample.fragment.ChooseAreaFragment" />-->
 
     </FrameLayout>
+
+    <android.support.design.widget.NavigationView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/left_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        />
 
 </android.support.v4.widget.DrawerLayout>

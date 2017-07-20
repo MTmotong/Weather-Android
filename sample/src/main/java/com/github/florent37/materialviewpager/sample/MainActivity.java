@@ -146,7 +146,7 @@ public class MainActivity extends DrawerActivity {
                         Toast.makeText(MainActivity.this, "dianle ", Toast.LENGTH_SHORT).show();
                 }
                 fragmentTransaction.commit();
-//                mDrawLayout.closeDrawers();
+                mDrawLayout.closeDrawers();
                 return true;
             }
         });
@@ -162,8 +162,4 @@ public class MainActivity extends DrawerActivity {
 //            fragmentTransaction.hide(weatherPage);
 //        }
     }
-    @Override
-    public boolean OnNavigationItemSelected(MenuItem item) {
-        return false;
-    }
- }
+}
